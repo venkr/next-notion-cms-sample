@@ -2,12 +2,11 @@
 
 # Next.js Notion Blog CMS
 
-This template helps you set up a blog, using Notion as a CMS for blog posts. Powered by the [t3 stack](https://create.t3.gg/), [react-notion-x](https://github.com/NotionX/react-notion-x) and the [official Notion API](https://developers.notion.com/).
+This template helps you set up a blog using Notion as a CMS. Powered by the [t3 stack](https://create.t3.gg/), [react-notion-x](https://github.com/NotionX/react-notion-x) and the [official Notion API](https://developers.notion.com/).
 
+I built this to power [my blog](https://www.venki.dev), because I enjoy writing in Notion, and don't want to have to port posts to another CMS when I'm done. This might be the right example to follow if you want to include a blog in your website, but otherwise want to build the website in React. 
 
-I built this to power [my blog](https://www.venki.dev), because I enjoy writing in Notion, and didn't want to have to switch to another CMS. This might be the right example to follow, if you want to include a blog element in your website, but otherwise want to build it in React yourself. 
-
-This is a fairly minimal example of using the Notion API + react-notion-x + a Notion table to store a post list. You can probably integrate this into an existing website as a blog example.
+This repo is a fairly minimal example of using the Notion API + react-notion-x + a Notion table to store a post list. You can probably integrate this into an existing website as a blog example.
 
 ## Other options for Notion-based blogs
 
@@ -59,3 +58,10 @@ These are the reasons why I set out to build my blog in this manner instead of u
 I personally use [fly.io](https://fly.io), but Vercel is the more popular alternative you can use insted.
 
 With `fly.io`, install the fly CLI, and then run `fly launch` to create an app and deploy.
+
+## How does this work?
+
+The Post table contains a list of posts & associated metadata, and the official Notion API is used to retrieve them. Results are cached in .cache for 30s, to reduce API usage. This logic mostly lives in `utils/notion.ts`
+
+Each post is rendered by `react-notion-x`, you can see its invocation in `components/blog_post.tsx`.
+
