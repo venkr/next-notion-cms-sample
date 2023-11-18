@@ -1,0 +1,106 @@
+html {
+  padding: 0;
+  margin: 0px;
+}
+
+/* Nat.css: https://twitter.com/conradgodfrey/status/1668657132655325199/photo/1 */
+body {
+  padding: 0;
+  line-height: 1.4; 
+  font-size: 16px; 
+  padding: 0 10px;
+  margin: 50px auto; 
+  max-width: 650px;
+  font-family: verdana;
+  white-space: pre-wrap;
+}
+
+ul {
+  margin-top: 0px;
+}
+
+#maincontent {
+  max-width: 38em;
+  margin: 15px auto;
+}
+
+h2{
+  margin-bottom: Opx;
+}
+
+/* Begin my custom formatting */
+
+/* Styling for code blocks */
+pre {
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  background-color: #f0f0f0;
+}
+code {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+code.notion-inline-code {
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+}
+
+/* Styling for a list */
+/* Set the bullet to a dash - */
+ul {
+  list-style-type: "- ";
+}
+
+/* Make h1s and h2s look like h3s and h4s */
+h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+h2 {
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+}
+
+/* Reduce margins on h3s and h4s too */
+h3, h4 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+/* Very small margin around ul */
+ul {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+
+/* Quotation formatting */
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+blockquote:before {
+  color: #ccc;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+/* Hide notion-hash-link classes */
+.notion-hash-link {
+  display: none;
+}
+
+/* Add spacing between blocks */
+.notion-text {
+  margin-bottom: 0.5em;
+}
